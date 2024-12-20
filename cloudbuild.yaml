@@ -1,0 +1,20 @@
+# cloudbuild.yaml
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/lexcommunis-bot', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/lexcommunis-bot']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'lexcommunis-bot'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/lexcommunis-bot'
+  - '--platform'
+  - 'managed'
+  - '--region'
+  - 'us-central1'
+  - '--allow-unauthenticated'
+  - '--set-env-vars'
+  - 'TELEGRAM_TOKEN=${_TELEGRAM_TOKEN},GOOGLE_PROJECT_ID=${_GOOGLE_PROJECT_ID},OPENAI_API_KEY=${_OPENAI_API_KEY}'

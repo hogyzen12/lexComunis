@@ -1,0 +1,10 @@
+# .gcloudignore
+.gcloudignore
+.git
+.gitignore
+__pycache__/
+*.pyc
+.env
+.cache
+logs/*
+data/*
