@@ -1,0 +1,32 @@
+.
+├── README.md
+├── __pycache__
+│   ├── config.cpython-313.pyc
+│   ├── feedback_handler.cpython-313.pyc
+│   ├── interaction_tracker.cpython-313.pyc
+│   ├── logger_config.cpython-313.pyc
+│   ├── pdf_manager.cpython-313.pyc
+│   ├── response_formatter.cpython-313.pyc
+│   └── tldr_handler.cpython-313.pyc
+├── assets
+│   ├── processing1.mp4
+│   ├── processing2.mp4
+│   ├── processing3.mp4
+│   ├── processing4.mp4
+│   └── thinking.mp4
+├── bot.py
+├── chapters.json
+├── config.py
+├── data
+│   └── interactions.jsonl
+├── feedback_handler.py
+├── interaction_tracker.py
+├── logger_config.py
+├── logs
+│   └── bot_20241219.log
+├── pdf_manager.py
+├── response_formatter.py
+├── tldr_handler.py
+└── uk_crypto_law_guide.pdf
+
+5 directories, 25 files
